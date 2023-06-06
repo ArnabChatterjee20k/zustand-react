@@ -4,9 +4,9 @@ import { devtools, persist } from "zustand/middleware";
 const courseStore = (set) => ({
   courses: [], // initial course
   addCourse: (course) => {
-    set((state) => {
-      courses: [course, ...state.courses];
-    });
+    set((state) => ({
+      courses: [course, ...state.courses],
+    }));
   },
   removeCourse: (courseId) => {
     set((state) => {
