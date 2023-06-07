@@ -10,6 +10,7 @@ export default function CourseForm() {
     addCourse({
       id: Math.ceil(Math.random() * 1000),
       title: courseTitle,
+      completed:false
     });
   };
 

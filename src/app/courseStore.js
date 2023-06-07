@@ -9,11 +9,9 @@ const courseStore = (set) => ({
     }));
   },
   removeCourse: (courseId) => {
-    set((state) => {
-      set((state) => ({
-        courses: state.courses.filter((e) => e.id !== id), //keeping the courses that not matches the id
-      }));
-    });
+    set((state) => ({
+      courses: state.courses.filter((e) => e.id !== courseId), //keeping the courses that not matches the id
+    }));
   },
   toggleCourseStatus: (courseId) => {
     set((state) => ({
